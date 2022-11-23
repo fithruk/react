@@ -7,7 +7,13 @@ body {
   display: flex;
 }
 
-.greeting {
+.profile__name {
+  color: red;
+  margin-right: 5px;
+}
+
+.greeting,
+.profile__birth {
   margin: auto;
   padding: 8px;
   border: 3px solid #eee;
