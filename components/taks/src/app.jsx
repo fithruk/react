@@ -1,6 +1,7 @@
 import React from "react";
 import Greetings from "./Greeting";
 import Profile from "./Profile";
+import Counter from "./Counter";
 
 const userData = {
   firstName: "James",
@@ -10,7 +11,13 @@ const userData = {
 };
 
 const App = () => {
-  return <Profile userData={userData} />;
+  return (
+    <>
+      <Counter start={17} interval={1000} />
+      <Counter start={1} interval={1000} />
+      <Counter start={2} interval={1000} />
+    </>
+  );
 };
 
 export default App;

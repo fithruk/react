@@ -2,28 +2,35 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+// #root {
+//   height: 100vh;
+//   display: flex;
+// }
+
+// .wrapper {
+//   border: 3px solid #eee;
+//   width: fit-content;
+//   height: fit-content;
+//   display: flex;
+//   align-items: center;
+//   margin: auto;
+// }
+
+// .profile__name {
+//   color: red;
+//   margin-right: 5px;
+// }
+
+// .greeting,
+// .profile__birth {
+//   margin: auto;
+//   padding: 8px;
+//   //   border: 3px solid #eee;
+// }
+
 #root {
   height: 100vh;
   display: flex;
-}
-
-.wrapper {
-  border: 3px solid #eee;
-  width: fit-content;
-  height: fit-content;
-  display: flex;
   align-items: center;
-  margin: auto;
-}
-
-.profile__name {
-  color: red;
-  margin-right: 5px;
-}
-
-.greeting,
-.profile__birth {
-  margin: auto;
-  padding: 8px;
-  //   border: 3px solid #eee;
+  justify-content: center;
 }
