@@ -1,5 +1,5 @@
 import React from "react";
-import Greetings from "./greetings/griitings";
+import Greetings from "./greetings/Griitings";
 const App = () => {
   return (
     <Greetings
