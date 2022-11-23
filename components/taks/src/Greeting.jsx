@@ -1,11 +1,11 @@
 import React from "react";
 
 const Greetings = (props) => {
-  const { name, sername, birthday } = props;
-  const age = new Date().getFullYear() - new Date(birthday).getFullYear();
+  const { firstName, lastName, birthDate } = props;
+  const age = new Date().getFullYear() - new Date(birthDate).getFullYear();
   return (
     <div className="greeting">
-      My name is {name} {sername}. I'm {age} years old
+      My name is {firstName} {lastName}. I'm {age} years old
     </div>
   );
 };

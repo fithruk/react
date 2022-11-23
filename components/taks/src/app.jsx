@@ -3,9 +3,9 @@ import Greetings from "./Greeting";
 const App = () => {
   return (
     <Greetings
-      name={"John"}
-      sername={"Doe"}
-      birthday={new Date("2001-01-01T11:11:11.819Z")}
+      firstName={"John"}
+      lastName={"Doe"}
+      birthDate={new Date("2001-01-01T11:11:11.819Z")}
     />
   );
 };
