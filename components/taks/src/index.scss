@@ -7,6 +7,15 @@ body {
   display: flex;
 }
 
+.wrapper {
+  border: 3px solid #eee;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
 .profile__name {
   color: red;
   margin-right: 5px;
@@ -16,5 +25,5 @@ body {
 .profile__birth {
   margin: auto;
   padding: 8px;
-  border: 3px solid #eee;
+  //   border: 3px solid #eee;
 }
