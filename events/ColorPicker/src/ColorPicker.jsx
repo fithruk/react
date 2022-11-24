@@ -28,17 +28,14 @@ class ColorPicker extends Component {
           <button
             data-color="Coral"
             className="picker__button picker__button_coral"
-            // onMouseEnter={this.onMouseMoveHandle}
           ></button>
           <button
             data-color="Aqua"
             className="picker__button picker__button_aqua"
-            // onMouseEnter={this.onMouseMoveHandle}
           ></button>
           <button
             data-color="Bisque"
             className="picker__button picker__button_bisque"
-            // onMouseEnter={this.onMouseMoveHandle}
           ></button>
         </div>
       </div>
