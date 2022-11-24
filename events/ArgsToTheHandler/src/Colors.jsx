@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-const red = "red";
-const blue = "blue";
-const green = "green";
+const red = "#f00";
+const blue = "#00f";
+const green = "#0f0";
 
 class Colors extends Component {
   constructor(props) {
