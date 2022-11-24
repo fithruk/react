@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 class GoodButton extends Component {
-  showAlert() {
-    alert("Good job!");
+  showAlert(e) {
+    alert(e.target.textContent);
   }
   render() {
     return (
