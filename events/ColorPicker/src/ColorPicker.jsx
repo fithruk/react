@@ -7,6 +7,7 @@ class ColorPicker extends Component {
       text: "",
     };
     this.onMouseMoveHandle = this.onMouseMoveHandle.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   onMouseMoveHandle(e) {
@@ -14,26 +15,34 @@ class ColorPicker extends Component {
       this.setState({
         text: (this.state.text = e.target.dataset.color),
       });
-    } else {
-      this.setState({
-        text: (this.state.text = ""),
-      });
     }
+  }
+
+  reset() {
+    this.setState({
+      text: (this.state.text = ""),
+    });
   }
   render() {
     return (
-      <div onMouseMove={this.onMouseMoveHandle}>
+      <div>
         <div className="picker__title">{this.state.text}</div>
         <div>
           <button
+            onMouseEnter={this.onMouseMoveHandle}
+            onMouseLeave={this.reset}
             data-color="Coral"
             className="picker__button picker__button_coral"
           ></button>
           <button
+            onMouseEnter={this.onMouseMoveHandle}
+            onMouseLeave={this.reset}
             data-color="Aqua"
             className="picker__button picker__button_aqua"
           ></button>
           <button
+            onMouseEnter={this.onMouseMoveHandle}
+            onMouseLeave={this.reset}
             data-color="Bisque"
             className="picker__button picker__button_bisque"
           ></button>
