@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Login from "./Login";
-
 import Logout from "./Logout";
+import Spinner from "./Spinner";
+
 class Auth extends Component {
   constructor(props) {
     super(props);
@@ -38,9 +39,13 @@ class Auth extends Component {
 
   render() {
     return this.state.isLoggedin ? (
-      <Logout onLogout={this.onLogout} spinner={this.state.spinner} />
+      this.state.spinner ? (
+        <Spinner size={"30px"} />
+      ) : (
+        <Logout onLogout={this.onLogout} />
+      )
     ) : (
-      <Login onLogin={this.onLogin} spinner={this.state.spinner} />
+      <Login onLogin={this.onLogin} />
     );
   }
 }
