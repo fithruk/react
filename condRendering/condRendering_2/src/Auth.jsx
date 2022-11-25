@@ -22,7 +22,7 @@ class Auth extends Component {
     this.setState({
       isLoggedin: (this.state.isLoggedin = false),
     });
-    this.changeSpinner();
+    // this.changeSpinner();
   };
 
   changeSpinner = () => {
