@@ -5,4 +5,4 @@ import "./index.scss";
 
 const root = document.querySelector("#root");
 
-ReactDOM.render(<Status />, root);
+ReactDOM.render(<Status isOnline />, root);
