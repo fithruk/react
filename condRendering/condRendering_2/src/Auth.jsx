@@ -14,18 +14,19 @@ class Auth extends Component {
   onLogin = () => {
     this.setState({
       isLoggedin: (this.state.isLoggedin = true),
-      spinner: (this.state.spinner = !this.state.spinner),
     });
-    setTimeout(() => {
-      this.setState({
-        spinner: (this.state.spinner = !this.state.spinner),
-      });
-    }, 2000);
+    this.changeSpinner();
   };
 
   onLogout = () => {
     this.setState({
       isLoggedin: (this.state.isLoggedin = false),
+    });
+    this.changeSpinner();
+  };
+
+  changeSpinner = () => {
+    this.setState({
       spinner: (this.state.spinner = !this.state.spinner),
     });
     setTimeout(() => {
