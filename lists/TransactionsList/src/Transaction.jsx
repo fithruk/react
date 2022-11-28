@@ -21,7 +21,7 @@ class Transaction extends Component {
           {moment(new Date(time)).format("H : mm")}
         </span>
         <span className="transaction__assets">
-          {from} {to}
+          {from} → {to}
         </span>
         <span className="transaction__rate">{numFormat(rate)}</span>
         <span className="transaction__amount">{numFormat(amount)}</span>
