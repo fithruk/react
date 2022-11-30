@@ -21,6 +21,7 @@ class Dimensions extends Component {
       innerWidth,
       innerHeight,
     });
+    document.title = `${innerWidth}px - ${innerHeight}px`;
   }
 
   componentWillUnmount() {
@@ -28,7 +29,6 @@ class Dimensions extends Component {
   }
 
   render() {
-    document.title = `${this.state.innerWidth}px - ${this.state.innerHeight}px`;
     window.addEventListener("resize", this.resize);
     return (
       <div className="dimensions">
