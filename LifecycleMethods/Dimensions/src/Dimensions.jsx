@@ -22,7 +22,7 @@ class Dimensions extends Component {
       innerHeight,
     });
     window.addEventListener("resize", this.resize);
-    document.title = `${innerWidth}px - ${innerHeight}px`;
+    document.title = `${innerWidth} x ${innerHeight}`;
   }
 
   componentWillUnmount() {
