@@ -8,8 +8,7 @@ class App extends Component {
     this.createUser = this.createUser.bind(this);
   }
 
-  createUser(user, e) {
-    e.preventDefault();
+  createUser(user) {
     console.log(user);
   }
   render() {
