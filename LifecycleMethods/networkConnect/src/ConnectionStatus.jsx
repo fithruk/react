@@ -37,10 +37,6 @@ class ConnectionStatus extends Component {
     window.addEventListener("offline", this.setOffline);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return this.state.status !== nextState;
-  }
-
   componentWillUnmount() {
     window.removeEventListener("online", this.setOnline);
     window.removeEventListener("Offline", this.setOffline);
