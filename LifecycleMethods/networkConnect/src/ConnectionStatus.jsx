@@ -7,27 +7,38 @@ class ConnectionStatus extends Component {
       status: "online",
     };
 
-    // this.onCheckStatus = this.onCheckStatus.bind(this);
-    // this.setOnline = this.setOnline.bind(this);
+    this.onCheckStatus = this.onCheckStatus.bind(this);
+    this.setOnline = this.setOnline.bind(this);
+    this.setOffline = this.setOffline.bind(this);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.onCheckStatus();
+  }
 
   setOnline() {
-    this.setState({
-      status: "online",
-    });
+    if (navigator.onLine) {
+      this.setState({
+        status: "online",
+      });
+    }
   }
 
   setOffline() {
-    this.setState({
-      status: "Offline",
-    });
+    if (!navigator.onLine) {
+      this.setState({
+        status: "offline",
+      });
+    }
   }
 
   onCheckStatus() {
     window.addEventListener("online", this.setOnline);
-    window.addEventListener("Offline", this.setOffline);
+    window.addEventListener("offline", this.setOffline);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state.status !== nextState;
   }
 
   componentWillUnmount() {
@@ -36,7 +47,7 @@ class ConnectionStatus extends Component {
   }
   render() {
     const classNames =
-      this.state.status === "online" ? "status" : "status_offline";
+      this.state.status === "online" ? "status" : "status status_offline";
     return <div className={classNames}>{this.state.status}</div>;
   }
 }
