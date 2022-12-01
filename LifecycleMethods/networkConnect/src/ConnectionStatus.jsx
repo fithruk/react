@@ -17,19 +17,15 @@ class ConnectionStatus extends Component {
   }
 
   setOnline() {
-    if (navigator.onLine) {
-      this.setState({
-        status: "online",
-      });
-    }
+    this.setState({
+      status: "online",
+    });
   }
 
   setOffline() {
-    if (!navigator.onLine) {
-      this.setState({
-        status: "offline",
-      });
-    }
+    this.setState({
+      status: "offline",
+    });
   }
 
   onCheckStatus() {
