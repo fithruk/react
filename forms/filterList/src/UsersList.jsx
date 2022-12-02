@@ -1,33 +1,46 @@
 import React, { Component } from "react";
+
 import User from "./User";
+import Filter from "./Filter";
 
 class UsersList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      users: [],
+      text: "",
     };
-    this.filterArr = this.filterArr.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
-  filterArr(arr, text) {
-    if (text === "") {
-      return arr.slice();
-    } else {
-      return arr.filter((user) => user.name.indexOf(text.toLowerCase()) > -1);
-    }
+  onChange(e) {
+    this.setState({
+      text: e.target.value.toLowerCase(),
+    });
+  }
+
+  componentDidMount() {
+    this.setState({
+      users: this.props.users,
+    });
   }
 
   render() {
-    const { users, text, getCount } = this.props;
-    const newArr = this.filterArr(users, text);
-
+    const arr = this.state.users
+      .filter(
+        (user) =>
+          user.name.toLowerCase().indexOf(this.state.text.toLowerCase()) > -1
+      )
+      .map(({ name, age, key }) => <User name={name} age={age} key={key} />);
     return (
-      <ul className="users">
-        {newArr.map(({ name, age, key }) => (
-          <User name={name} age={age} key={key} />
-        ))}
-      </ul>
+      <>
+        <Filter
+          filterText={this.state.text}
+          count={arr.length}
+          onChange={this.onChange}
+        />
+        <ul className="users">{arr}</ul>
+      </>
     );
   }
 }
