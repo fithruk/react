@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import User from "./UserProfile";
+import UserProfile from "./UserProfile";
 import UserMenu from "./UserMenu";
 
 const link = `https://api.github.com/users/`;
@@ -36,7 +36,7 @@ class App extends Component {
         <header className="header">
           <UserMenu userData={this.state} />
         </header>
-        <User userData={this.state} />
+        <UserProfile userData={this.state} />
       </div>
     );
   }

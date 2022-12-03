@@ -6,7 +6,7 @@ const webpack = require("webpack");
 module.exports = (env, argv) => {
   const isProduction = argv.mode === "production";
   const config = {
-    entry: "./solution/src/index.jsx",
+    entry: "./src/index.jsx",
     output: {
       filename: "bundle.js",
     },
@@ -30,7 +30,7 @@ module.exports = (env, argv) => {
       new webpack.ProgressPlugin(),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: "./solution/src/index.html",
+        template: "./src/index.html",
       }),
     ],
     resolve: {
