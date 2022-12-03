@@ -10,18 +10,13 @@ class ShoppingCart extends Component {
       cartItems: [
         {
           id: 1,
-          name: "Camaz",
+          name: "iPhone 11",
           price: 999,
         },
         {
           id: 2,
-          name: "Camaro",
-          price: 1999,
-        },
-        {
-          id: 3,
-          name: "Jiguly",
-          price: 5,
+          name: "iPad Pro",
+          price: 799,
         },
       ],
     };
