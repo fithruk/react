@@ -8,12 +8,12 @@ const ProductsList = ({ cartItems }) => {
     </li>
   ));
 
+  const total = cartItems.reduce((acc, { price }) => acc + price, 0);
+
   return (
     <div className="products">
       <ul className="products__list">{listItems}</ul>
-      <div className="products__total">
-        Total: ${cartItems.reduce((acc, { price }) => acc + price, 0)}
-      </div>
+      <div className="products__total">Total: ${total}</div>
     </div>
   );
 };
