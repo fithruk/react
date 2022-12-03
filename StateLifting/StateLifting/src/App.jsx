@@ -7,11 +7,7 @@ const link = `https://api.github.com/users/`;
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: null,
-      location: null,
-      avatar_url: null,
-    };
+    this.state = null;
   }
 
   componentDidMount() {
@@ -31,14 +27,18 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="page">
-        <header className="header">
-          <UserMenu userData={this.state} />
-        </header>
-        <UserProfile userData={this.state} />
-      </div>
-    );
+    if (!this.state) {
+      return null;
+    } else {
+      return (
+        <div className="page">
+          <header className="header">
+            <UserMenu userData={this.state} />
+          </header>
+          <UserProfile userData={this.state} />
+        </div>
+      );
+    }
   }
 }
 export default App;
