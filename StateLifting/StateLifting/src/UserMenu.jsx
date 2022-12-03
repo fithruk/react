@@ -1,27 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class UserMenu extends Component {
-  constructor(props) {
-    super(props);
+const UserMenu = ({ userData }) => {
+  if (!userData) {
+    return null;
+  } else {
+    const { name, avatar_url } = userData;
+    return (
+      <div className="menu">
+        <span className="menu__greeting">Hello, {name}</span>
+        <img alt="User Avatar" src={avatar_url} className="menu__avatar" />
+      </div>
+    );
   }
-  render() {
-    if (!this.props.userData) {
-      return null;
-    } else {
-      return (
-        <div className="menu">
-          <span className="menu__greeting">
-            Hello, {this.props.userData.name}
-          </span>
-          <img
-            alt="User Avatar"
-            src={this.props.userData.avatar_url}
-            className="menu__avatar"
-          />
-        </div>
-      );
-    }
-  }
-}
+};
 
 export default UserMenu;
