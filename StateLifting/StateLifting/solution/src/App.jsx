@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.userId);
     this.fetchData(this.props.userId);
   }
 
