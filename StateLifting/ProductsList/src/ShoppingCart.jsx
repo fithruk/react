@@ -28,13 +28,12 @@ class ShoppingCart extends Component {
   }
 
   render() {
-    const { userName } = this.props;
+    const {
+      userName: { firstName },
+    } = this.props;
     return (
       <div className="column">
-        <CartTitle
-          userName={userName.firstName}
-          count={this.state.cartItems.length}
-        />
+        <CartTitle userName={firstName} count={this.state.cartItems.length} />
         <ProductsList cartItems={this.state.cartItems} />
       </div>
     );

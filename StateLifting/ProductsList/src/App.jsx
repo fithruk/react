@@ -28,10 +28,11 @@ class App extends Component {
   }
 
   render() {
+    const { firstName, lastName } = this.state.userData;
     return (
       <div className="page">
         <h1 class="title">
-          Hello, {this.state.userData.firstName} {this.state.userData.lastName}
+          Hello, {firstName} {lastName}
         </h1>
         <main className="content">
           <ShoppingCart userName={this.state.userData} />
