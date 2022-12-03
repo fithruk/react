@@ -8,8 +8,8 @@ class App extends Component {
     super(props);
     this.state = {
       userData: {
-        firstName: "Vasya",
-        lastName: "Pupkin",
+        firstName: "John",
+        lastName: "Doe",
       },
     };
 
