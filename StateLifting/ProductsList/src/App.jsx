@@ -31,7 +31,7 @@ class App extends Component {
     const { firstName, lastName } = this.state.userData;
     return (
       <div className="page">
-        <h1 class="title">
+        <h1 className="title">
           Hello, {firstName} {lastName}
         </h1>
         <main className="content">
