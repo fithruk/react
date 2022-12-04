@@ -4,4 +4,4 @@ import "./index.scss";
 // import App from "./App";
 import Page from "./App";
 
-ReactDom.render(<Page userId={"Facebook"} />, root);
+ReactDom.render(<Page userId={"Github"} />, root);
