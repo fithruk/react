@@ -20,10 +20,11 @@ class App extends Component {
 
   render() {
     const { isOpen } = this.state;
+    const btnContent = !isOpen ? "Show dialog" : "Close dialog";
     return (
       <div class="app">
         <button class="btn" onClick={this.toggleDialog}>
-          Show dialog
+          {btnContent}
         </button>
         <Dialog
           title={"Recommendation"}
