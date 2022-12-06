@@ -5,7 +5,7 @@ const Expand = ({ title, children, isOpen, toggleContent }) => {
     transform: isOpen ? "rotate(0)" : "rotate(-180deg)",
   };
 
-  const child = isOpen && <div className="expand__content">{children}</div>;
+  const child = isOpen && children;
   return (
     <div className="expand border">
       <div className="expand__header">
@@ -14,7 +14,7 @@ const Expand = ({ title, children, isOpen, toggleContent }) => {
           <i className="fas fa-chevron-up" style={styles}></i>
         </button>
       </div>
-      {child}
+      <div class="expand__content">{child}</div>
     </div>
   );
 };
