@@ -7,6 +7,7 @@ import {
   updateStatusOfExistingTask,
   deleteDeprecatedTask,
 } from "./serverRequests";
+
 class TaskList extends Component {
   constructor(props) {
     super(props);
