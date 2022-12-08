@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-const link = `https://api.github.com/users/`;
-
 class User extends Component {
   constructor(props) {
     super(props);

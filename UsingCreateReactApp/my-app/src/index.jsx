@@ -1,6 +1,8 @@
+import "./index.css";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+
 const element = (
   <div className="greeting">
     <div className="greeting__title">Hello, world!</div>
