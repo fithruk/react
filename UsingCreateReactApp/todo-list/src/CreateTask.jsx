@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class CreateTask extends Component {
   constructor(props) {
@@ -7,6 +8,7 @@ class CreateTask extends Component {
       value: "",
     };
     this.onChangetaskValue = this.onChangetaskValue.bind(this);
+    this.onChangevalue = this.onChangevalue.bind(this);
   }
 
   onChangetaskValue(e) {
@@ -14,7 +16,6 @@ class CreateTask extends Component {
     this.setState({
       value,
     });
-    this.onChangevalue = this.onChangevalue.bind(this);
   }
 
   onChangevalue() {
@@ -41,5 +42,9 @@ class CreateTask extends Component {
     );
   }
 }
+
+CreateTask.propTypes = {
+  addNewTask: PropTypes.func,
+};
 
 export default CreateTask;
