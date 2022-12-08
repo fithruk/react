@@ -1,5 +1,6 @@
-import TodoList from './TodoList';
-import './index.scss';
+import React from "react";
+import TodoList from "./TodoList";
+import "./index.scss";
 
 function App() {
   return (
