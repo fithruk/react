@@ -24,6 +24,7 @@ const User = ({ match: { params } }) => {
   }, [params.USER_ID]);
 
   if (!user) return null;
+
   const { avatar_url, name, location } = user;
   return (
     <div className="user">
